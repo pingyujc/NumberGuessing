@@ -16,7 +16,7 @@ function startgame(){
     // set up game variables
     let count = 1;
     let correct = false;
-    let remainingTries = 10; // how many more tries they have
+    let remainingTries = 5; // how many more tries they have
 
     // event listener for the guess button
     guessBtn.addEventListener('click', function() {
@@ -39,7 +39,7 @@ function startgame(){
         }
 
         // check if the game is over
-        if (count >= 10 || correct) {
+        if (count >= 5 || correct) {
             guessInput.disabled = true;
             guessBtn.disabled = true;
             if (!correct) {
@@ -49,7 +49,7 @@ function startgame(){
             }
         }
 
-        if(count == 10){
+        if(count == 5){
             againBtn.style.display = 'block';
         }
 
@@ -67,7 +67,7 @@ function startgame(){
         result.innerHTML = '';
         count = 1;
         correct = false;
-        remainingTries = 10; // how many more tries they have
+        remainingTries = 5; // how many more tries they have
         tries.innerHTML = remainingTries;
         startgame();
     });
